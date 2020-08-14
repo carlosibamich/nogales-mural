@@ -1,0 +1,114 @@
+@import '../../scss-global/config';
+
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 230px;
+  padding-bottom: 50px;
+  background-color: $blue-color;
+  letter-spacing: .2px;
+  border-top: 4px solid $red-color;
+  z-index: 10;
+  
+  .top-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px;
+    color: $white-color;
+
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+  
+      .info {
+        margin-bottom: 3px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.02rem;
+        font-weight: 400;
+
+        &.underline {
+          padding-bottom: 6px;
+          border-bottom: 1px solid #9EA6C2;
+        }
+      }
+    }
+  
+    .copyright-info {
+      display: flex;
+      flex-direction: column;
+  
+      .copyright {
+        margin-bottom: 3px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.04rem;
+        font-weight: 400;
+
+        &.underline {
+          padding-bottom: 6px;
+          border-bottom: 1px solid #9EA6C2;
+        }
+      }
+    }
+  
+    .social-icons {
+      font-size: 2.2rem;
+      color: #9EA6C2;
+  
+      .icon {
+        width: 44px;
+        height: 44px;
+        margin-right: 24px;
+        padding: 8px;
+        text-align: center;
+        border: 2px solid #9EA6C2;
+        border-radius: 28%;
+        transition: all 250ms ease-in;
+        cursor: pointer;
+  
+        &:hover {
+          border: 2px solid $white-color;
+          color: $white-color;
+        }
+      }
+  
+      .instagram {
+        padding: 6px;
+      }
+    }
+  }
+
+  .separator {
+    width: 88%;
+    height: 5px;
+    margin: 35px 0 30px 0;
+    border-top: 1px solid #9EA6C2;
+  }
+
+  .footer-nav ul {
+    display: flex;
+    width: 100%;
+    color: #9EA6C2;
+
+    li {
+      margin: 0 56px;
+      padding-bottom: 3px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      text-transform: lowercase;
+      border-bottom: 1px solid transparent;
+      transition: all 250ms ease-in;
+
+      &:hover {
+        color: $white-color;
+        border-bottom-color: $white-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

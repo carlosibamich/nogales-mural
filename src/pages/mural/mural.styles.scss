@@ -1,0 +1,10 @@
+@import '../../scss-global/config';
+
+.mural-container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 58px;
+  padding-bottom: 230px;
+  background-color: $white-color;
+  border-top: 4px solid $red-color;
+}

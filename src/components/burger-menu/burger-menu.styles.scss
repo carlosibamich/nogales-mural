@@ -1,0 +1,194 @@
+@import '../../scss-global/config';
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+
+  .menu-items {
+    .menu-toggler {
+      position: absolute;
+      top: 90px;
+      right: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 42px;
+      opacity: 0;
+      z-index: 15;
+      cursor: pointer;
+
+      /* Toggler animation. Rotate burger div (center line) 135 degrees */
+      &:checked {
+        bottom: -18px;
+        height: 70px;
+
+        & ~ .burger-box {
+          .menu-word {
+            opacity: 0;
+          }
+        
+          .pages-word {
+            opacity: 1;
+            z-index: 10;
+          }
+
+          .menu-bar { 
+            bottom: 24px;
+            height: 5px;
+
+            div {
+              transform: rotate(135deg) scale(.75);
+
+              /* Superimpose top and bottom burger lines and rotate 90 degrees to form and X */
+              &:before {
+                top: 0;
+                transform: rotate(90deg);
+              }
+            }
+          }
+
+        & ~ .menu {
+          .menu-bg {
+            visibility: visible;
+            opacity: .24;
+          }
+
+          .dropdown {
+            visibility: visible;
+          }
+        }
+      }
+      }
+    }
+
+    .burger-box {
+      position: absolute;
+      top: 90px;
+      right: 140px;
+      width: 58px;
+      height: 42px;
+      z-index: 10;
+      }
+    }
+
+    .menu-word {
+      margin-bottom: 4px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.07rem;
+      font-weight: 700;
+      color: $blue-color;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      transition: all 200ms ease;
+      z-index: 10;
+    }
+
+    .pages-word {
+      position: absolute;
+      bottom: -15px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.07rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: #3F4E7E;
+      opacity: 0;
+      transition: all 200ms ease;
+      z-index: 10;
+    }
+
+    .menu-bar {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 4px;
+      z-index: 10;
+
+      div {
+        position: relative;
+        width: 100%;
+        height: inherit;
+        background-color: $red-color;
+        transition: all .4s ease;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 12px;
+          width: inherit;
+          height: inherit;
+          background-color: inherit;
+        }
+      }
+    }
+
+    .menu {
+      .menu-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2e3d6d;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease;
+        z-index: 5;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 178px;
+        right: 30px;
+        width: 330px;
+        height: 440px;
+        background-color: #fefefe;
+        visibility: hidden;
+        border-radius: 2%;
+        box-shadow: -5px 3px 13px rgba(0,0,0,.2);
+        z-index: 10;
+        
+        .pointer {
+          position: absolute;
+          top: -26px;
+          right: 112px;
+          border-style: solid;
+          border-width: 0 28px 40px 28px;
+          border-color:  transparent transparent #fefefe transparent;
+          z-index: 12;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          padding-top: 35px;
+          padding-right: 54px;
+          font-family: 'Raleway', sans-serif;
+          font-size: 1.38rem;
+          
+          li {
+            margin: 8px;
+            padding: 1px;
+            color: $red-color;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+              border-bottom-color: $red-color;
+              transition: all .6s ease-in-out;
+            }
+          }
+        }
+      }      
+    }
+  }
+

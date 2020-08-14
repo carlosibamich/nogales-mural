@@ -1,0 +1,50 @@
+@import '../../scss-global/config';
+
+.home-icon-container {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  width: 64px;
+  border-radius: 50%;
+  z-index: 10;
+
+  .outer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: #fefefe;
+    border: 2px solid $blue-color;
+    border-radius: 50%;
+    box-shadow: 0 3px 20px rgba(0,0,0,.08);
+  }
+
+  .inner-circle {
+    width: 52px;
+    height: 52px;
+    border: 2px solid $red-color;
+    border-radius: 50%;
+  }
+
+  .letter-n {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: $red-color;
+
+  }
+  
+  &:hover {
+    .outer-circle {
+      background-color: #fafafa;
+    }
+
+    .letter-n {
+      color: $blue-color;
+    }
+  }
+}
