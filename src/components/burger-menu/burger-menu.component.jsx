@@ -23,9 +23,9 @@ const BurgerMenu = ({ history }) => {
               <li onClick={() => history.push('/information')}>Information</li>
               <li onClick={() => history.push('/portfolio')}>Portfolio</li>
               <li onClick={() => history.push('/mural')}>Mural</li>
-              <li onClick={() => history.push('/contacto')}>Contacto</li>
-              <li onClick={() => history.push('/informacion')}>Información</li>
               <li onClick={() => history.push('/portafolio')}>Portafolio</li>
+              <li onClick={() => history.push('/informacion')}>Información</li>
+              <li onClick={() => history.push('/contacto')}>Contacto</li>
             </ul>
           </div>
         </div>

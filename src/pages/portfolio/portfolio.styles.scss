@@ -3,7 +3,7 @@
 .portfolio-spread {
   position: relative;
   min-height: 100vh;
-  padding-top: 58px;
+  padding-top: 62px;
   padding-bottom: 230px;
   background-color: $white-color;
   border-top: 4px solid $red-color;
@@ -12,35 +12,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 96px;
+    margin-bottom: 104px;
     color: $blue-color;
     font-family: 'Montserrat', sans-serif;
-
+    
     .my-name {
-      margin-bottom: 2px;
+      margin-bottom: 4px;
       font-size: 4.1rem;
       font-weight: 500;
       text-transform: uppercase;
+      z-index: 20;
     }
-
+    
     .separator {
       width: 48%;
       height: 10px;
       border-top: 1px solid $red-color;
+      z-index: 20;
     }
     
     .phrase {
-      margin-top: 3px;
+      margin-top: 6px;
       font-size: 1.45rem;
       font-weight: 500;
       letter-spacing: .3px;
+      z-index: 20;
     }
   }
 
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 1260px;
+    width: 1236px;
     margin: 0 auto;
     padding-bottom: 150px;
   }
