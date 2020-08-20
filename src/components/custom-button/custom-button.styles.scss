@@ -1,0 +1,36 @@
+@import '../../scss-global/config';
+
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  min-width: 130px;
+  height: 45px;
+  //margin-right: 20px;
+  padding: 0 43px;
+  font-size: .8rem;
+  font-weight: 500;
+  color: $white-color;
+  letter-spacing: .1px;;
+  text-transform: uppercase;
+  background-color: $red-color;
+  transition: all .35s ease;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $blue-color;
+  }
+
+   &.google-sign-in {
+    background-color: $blue-color;
+
+    &:hover {
+      background-color: $red-color;
+    }
+  }
+}

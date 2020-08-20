@@ -125,12 +125,12 @@ class Portfolio extends React.Component {
     return (
       <div className='portfolio-spread'>
         <Link to="/"><HomeIcon /></Link>
+        {/* <BurgerMenu /> */}
         <div className="heading">
           <h1 className="my-name">Carlos Ibarra</h1>
           <div className="separator"></div>
           <h3 className="phrase">A Collection of Ideas, Paintings, Drawings and Sculptures</h3>
         </div>
-        <BurgerMenu />
         <div className='portfolio-items'>
           {this.state.sections.map(({ name, imagePATH, id }) => (
             <PortfolioItem key={id} title={name} imagePATH={imagePATH} />

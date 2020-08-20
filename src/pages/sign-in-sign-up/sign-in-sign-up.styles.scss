@@ -1,0 +1,22 @@
+@import '../../scss-global/config';
+
+.contact-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 96vh;
+  padding-bottom: 230px;
+  background-color: $white-color;
+  border-top: 4px solid $red-color;
+  overflow: hidden;
+
+  .forms {
+    position: relative;
+    top: 240px;
+    width: 82%;
+    min-height: inherit;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 120px;
+  }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { auth } from '../../firebase/firebase.utils';
 
 import './burger-menu.styles.scss';
 
-const BurgerMenu = ({ history }) => {
+const BurgerMenu = ({ currentUser }) => {
   return (
     <div className="menu-container">
       <div className="menu-items">
@@ -16,21 +17,27 @@ const BurgerMenu = ({ history }) => {
         <div className="menu">
           <div className="menu-bg"></div>
           <div className="dropdown">
-            <div className="pointer"></div>
-            <ul>
-              <li onClick={() => history.push('/')}>Home</li>
-              <li onClick={() => history.push('/contact')}>Contact</li>
-              <li onClick={() => history.push('/information')}>Information</li>
-              <li onClick={() => history.push('/portfolio')}>Portfolio</li>
-              <li onClick={() => history.push('/mural')}>Mural</li>
-              <li onClick={() => history.push('/portafolio')}>Portafolio</li>
-              <li onClick={() => history.push('/informacion')}>Información</li>
-              <li onClick={() => history.push('/contacto')}>Contacto</li>
-            </ul>
+            <div className="bubble-pointer"></div>
+            <div className="dropdown-options">
+              <Link className="option" to="/">Home</Link>
+              <Link className="option" to="/mural">Mural</Link>
+              <Link className="option" to="/portfolio">Portfolio</Link>
+              <Link className="option" to="/about">About</Link>
+              <Link className="option" to="/contact">Contact</Link>
+              { currentUser ? 
+                <div className="option" onClick={() => auth.signOut()}>Sign out</div>
+                :
+                <Link className="option" to="/signin">Sign in</Link>
+              }
+              <Link className="option" to="/portafolio">Portafolio</Link>
+              <Link className="option" to="/informacion">Información</Link>
+              <Link className="option" to="/contacto">Contactar</Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default withRouter(BurgerMenu);
+
+export default BurgerMenu;

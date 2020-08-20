@@ -1,0 +1,29 @@
+@import '../../scss-global/config';
+
+.sign-in-container {
+  width: 420px;
+  height: 560px;
+  color: $blue-color;
+
+  .heading {
+    margin-bottom: 62px;
+
+    h2 {
+      margin-bottom: 5px;
+      font-size: 1.52rem;
+      font-weight: 500;
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  .sign-in-form {
+    .sign-in-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 56px;
+    }
+  }
+}

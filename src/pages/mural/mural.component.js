@@ -9,10 +9,10 @@ import './mural.styles.scss';
 const Mural = ({ history }) => {
   return (
     <div className="mural-container">
-      <button onClick={() => {history.push('/')}}>
+      <div onClick={() => {history.push('/')}}>
         <HomeIcon />
-      </button>
-      <BurgerMenu />
+        {/* <BurgerMenu /> */}
+      </div>
       <Footer />
     </div>
   )

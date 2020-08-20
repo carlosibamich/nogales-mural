@@ -1,0 +1,56 @@
+@import '../../scss-global/config';
+
+%shrink-label {
+  top: -16px;
+  font-size: .8rem;
+  color: $red-color;
+}
+
+.form-container {
+  position: relative;
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45px;
+  //border-bottom: 1px solid $blue-color;
+  
+  label {
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    font-size: .9rem;
+    color: #A1A1A1;
+    transition: all .3s ease;
+    
+    &.shrink {
+      @extend %shrink-label;
+    }
+  }
+  
+  input {
+    padding: 10px 10px 3px 6px;
+    background-color: transparent;
+    font-size: 1.03rem;
+    font-weight: 400;
+    color: $blue-color;
+    border: none;
+    border-bottom: 1px solid $blue-color;
+    transition: all .3s ease;
+    z-index: 1;
+    
+    &:focus {
+      outline: none;
+      background-color: transparent;
+      border-bottom-color: $red-color;
+    }
+    
+    &:focus ~ label {
+      @extend %shrink-label;
+      
+    }
+
+    &.red-line {
+      border-bottom: 1px solid $red-color;
+    }
+  }
+}
