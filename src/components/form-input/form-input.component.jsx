@@ -1,7 +1,5 @@
 import React from 'react';
 
-import CustomButton from '../custom-button/custom-button.component';
-
 import './form-input.styles.scss';
 
 const FormInput = ({ handleChange, label, ...otherProps }) => {

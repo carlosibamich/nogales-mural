@@ -1,9 +1,7 @@
 @import '../../scss-global/config';
 
 .sign-in-container {
-  width: 420px;
-  height: 560px;
-  color: $blue-color;
+  @include sign-in-sign-out-styles;
 
   .heading {
     margin-bottom: 62px;

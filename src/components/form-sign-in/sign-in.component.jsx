@@ -12,24 +12,26 @@ class SignIn extends React.Component {
     super();
     
     this.state = {
-      username: '',
+      displayName: '',
       email: '', 
       password: ''};
   };
   
   
-  handleChange = (e) => {
+  handleChange = e => {
     const { value, name } = e.target;
     this.setState({ [name]: value });
   };
   
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
-    this.setState({username: '', email: '', password: ''});
-    alert('Welcome back to the site ' + this.state.username + '!');
+    this.setState({displayName: '', email: '', password: ''});
+    alert('Welcome back to the site ' + this.state.displayName + '!');
   };
 
   render () {
+    const { displayName, email, password } = this.state;
+
     return (
       <div className="sign-in-container">
         <div className="heading">
@@ -38,9 +40,9 @@ class SignIn extends React.Component {
         </div>
         <form className="sign-in-form" onSubmit={this.handleSubmit}>
           <FormInput 
-            name="username"
+            name="displayName"
             type="text"
-            value={this.state.username}
+            value={displayName}
             label="Username"
             handleChange={this.handleChange}
             required
@@ -48,7 +50,7 @@ class SignIn extends React.Component {
           <FormInput 
             name="email"
             type="email"
-            value={this.state.email}
+            value={email}
             label="Email"
             handleChange={this.handleChange}
             required
@@ -56,7 +58,7 @@ class SignIn extends React.Component {
           <FormInput
             name="password"
             type="password"
-            value={this.state.password}
+            value={password}
             label="Password"
             handleChange={this.handleChange}
             required

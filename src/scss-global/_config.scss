@@ -5,3 +5,10 @@ $blue-color: #495785;
 $green-color: #608367;
 $beige-color: #f2cda0;
 $dark-grey-color: #444;
+
+@mixin sign-in-sign-out-styles {
+  position: relative;
+  width: 420px;
+  height: 560px;
+  color: $blue-color;
+}
