@@ -3,7 +3,7 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import { signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 import './sign-in.styles.scss';
 
@@ -12,7 +12,6 @@ class SignIn extends React.Component {
     super();
     
     this.state = {
-      displayName: '',
       email: '', 
       password: ''};
   };
@@ -23,14 +22,20 @@ class SignIn extends React.Component {
     this.setState({ [name]: value });
   };
   
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    this.setState({displayName: '', email: '', password: ''});
-    alert('Welcome back to the site ' + this.state.displayName + '!');
+    const { email, password } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({email: '', password: ''});
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render () {
-    const { displayName, email, password } = this.state;
+    const { email, password } = this.state;
 
     return (
       <div className="sign-in-container">
@@ -39,14 +44,6 @@ class SignIn extends React.Component {
           <span>Sign in with your email and password</span>
         </div>
         <form className="sign-in-form" onSubmit={this.handleSubmit}>
-          <FormInput 
-            name="displayName"
-            type="text"
-            value={displayName}
-            label="Username"
-            handleChange={this.handleChange}
-            required
-          />
           <FormInput 
             name="email"
             type="email"
