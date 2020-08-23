@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils';
 
@@ -17,7 +18,7 @@ const BurgerMenu = ({ currentUser }) => {
         <div className="menu">
           <div className="menu-bg"></div>
           <div className="dropdown">
-            <div className="bubble-pointer"></div>
+            <div className="dropdown-pointer"></div>
             <div className="dropdown-options">
               <Link className="option" to="/">Home</Link>
               <Link className="option" to="/mural">Mural</Link>
@@ -40,4 +41,9 @@ const BurgerMenu = ({ currentUser }) => {
   );
 };
 
-export default BurgerMenu;
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(BurgerMenu);
+//export to every page component excluding homepage.component

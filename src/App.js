@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route, Redirect} from 'react-router-dom';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { setCurrentUser } from './redux/user/user.actions';
 
 import BurgerMenu from './components/burger-menu/burger-menu.component';
 import Homepage from './pages/homepage/homepage.component';
@@ -13,31 +15,23 @@ import SignInSignUp from './pages/sign-in-sign-up/sign-in-sign-up.component';
 import './App.css';
 
 class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      currentUser: null
-    };
-  };
-
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    const {setCurrentUser} = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(snapshot => {
-          this.setState({
-            currentUser: {
+          setCurrentUser({
               id: snapshot.id,
               ...snapshot.data()
-            }
           }, () => console.log(this.state));
         });
       } else {
-        this.setState({ currentUser: null });
+        setCurrentUser({ currentUser: null });
       }
     });
   };
@@ -49,7 +43,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <BurgerMenu currentUser={this.state.currentUser} />
+        <BurgerMenu />
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route path='/mural' component={Mural} />
@@ -62,4 +56,8 @@ class App extends React.Component {
   }
 };
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(null, mapDispatchToProps)(App);
