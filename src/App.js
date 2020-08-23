@@ -18,7 +18,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const {setCurrentUser} = this.props;
+    const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -31,7 +31,7 @@ class App extends React.Component {
           }, () => console.log(this.state));
         });
       } else {
-        setCurrentUser({ currentUser: null });
+        setCurrentUser(userAuth);
       }
     });
   };
@@ -49,15 +49,29 @@ class App extends React.Component {
           <Route path='/mural' component={Mural} />
           <Route path='/portfolio' component={Portfolio} />
           <Route path='/portafolio' component={Portafolio} />
-          <Route path='/signin' component={SignInSignUp} />
+          <Route 
+            exact 
+            path='/signin'
+            render={() => 
+              this.props.currentUser ? (
+                <Redirect to='/mural' />
+              ) : (
+                <SignInSignUp />
+              )
+            } 
+          />
         </Switch>
       </div>
     );
   }
 };
 
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser
+})
+
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

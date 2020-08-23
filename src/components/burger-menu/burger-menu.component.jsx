@@ -25,10 +25,15 @@ const BurgerMenu = ({ currentUser }) => {
               <Link className="option" to="/portfolio">Portfolio</Link>
               <Link className="option" to="/about">About</Link>
               <Link className="option" to="/contact">Contact</Link>
-              { currentUser ? 
-                <div className="option" onClick={() => auth.signOut()}>Sign out</div>
-                :
-                <Link className="option" to="/signin">Sign in</Link>
+              {currentUser ? (
+                  <div className="option" onClick={() => auth.signOut()}>
+                    Sign out
+                  </div>
+                ) : (
+                  <Link className="option" to="/signin">
+                    Sign in
+                  </Link>
+                )
               }
               <Link className="option" to="/portafolio">Portafolio</Link>
               <Link className="option" to="/informacion">Información</Link>
