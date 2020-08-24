@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import BurgerMenu from '../../components/burger-menu/burger-menu.component';
 
@@ -12,10 +13,10 @@ import './sign-in-sign-up.styles.scss';
 const SignInSignUp = ({ history }) => {
   return (
     <div className="contact-container">
-      <div className="home-button" onClick={() => history.push('./')}>
+      <div className="home-button" onClick={() => history.push('/')}>
         <HomeIcon />
       </div>
-      {/* <BurgerMenu /> */}
+      <BurgerMenu />
       <div className="forms">
         <SignIn />
         <SignUp />
@@ -25,5 +26,5 @@ const SignInSignUp = ({ history }) => {
   );
 };
 
-export default SignInSignUp;
+export default withRouter(SignInSignUp);
 //export to App.js

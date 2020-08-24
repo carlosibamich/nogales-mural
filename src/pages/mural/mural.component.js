@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HomeIcon from '../../components/home-icon/home-icon.component';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
 import BurgerMenu from '../../components/burger-menu/burger-menu.component';
 import Footer from '../../components/footer/footer.component';
 
@@ -11,8 +12,9 @@ const Mural = ({ history }) => {
     <div className="mural-container">
       <div onClick={() => {history.push('/')}}>
         <HomeIcon />
-        {/* <BurgerMenu /> */}
       </div>
+      <CartIcon />
+      <BurgerMenu />
       <Footer />
     </div>
   )

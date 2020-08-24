@@ -43,7 +43,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <BurgerMenu />
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route path='/mural' component={Mural} />

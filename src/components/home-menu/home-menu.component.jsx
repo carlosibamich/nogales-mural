@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import './home-menu.styles.scss';
 
-const HomeMenu = ({ history, match }) => {
+const HomeMenu = ({ history }) => {
   return (
     <div className='menu-wrap'>
       <input type='checkbox' className='toggler'></input>

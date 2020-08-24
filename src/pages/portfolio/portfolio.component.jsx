@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 
 import PortfolioItem from '../../components/portfolio-item/portfolio-item.component';
 import HomeIcon from '../../components/home-icon/home-icon.component';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 import BurgerMenu from '../../components/burger-menu/burger-menu.component';
 import Footer from '../../components/footer/footer.component';
 
 import './portfolio.styles.scss';
+import { connect } from 'react-redux';
 
 
 class Portfolio extends React.Component {
@@ -125,7 +128,12 @@ class Portfolio extends React.Component {
     return (
       <div className='portfolio-spread'>
         <Link to="/"><HomeIcon /></Link>
-        {/* <BurgerMenu /> */}
+        <CartIcon />
+        { 
+          this.props.hidden ? null :
+          <CartDropdown />
+        }
+        <BurgerMenu />
         <div className="heading">
           <h1 className="my-name">Carlos Ibarra</h1>
           <div className="separator"></div>
@@ -142,4 +150,8 @@ class Portfolio extends React.Component {
   };
 };
 
-export default Portfolio;
+const mapStateToProps = ({ dropdown: { hidden } }) => ({
+  hidden
+});
+
+export default connect(mapStateToProps)(Portfolio);

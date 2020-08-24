@@ -124,7 +124,7 @@ class Portafolio extends React.Component {
     return (
       <div className='portfolio-spread'>
         <Link to="/"><HomeIcon /></Link>
-        {/* <BurgerMenu /> */}
+        <BurgerMenu />
         <div className="heading">
           <h1 className="my-name">Carlos Ibarra</h1>
           <div className="separator"></div>

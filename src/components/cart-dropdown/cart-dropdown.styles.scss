@@ -1,0 +1,26 @@
+@import '../../scss-global/config';
+
+.cart-dropdown-container {
+  position: absolute;
+  top: 160px;
+  right: 240px;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 340px;
+  padding: 20px;
+  border: 1px solid $red-color;
+  background-color: #fefefe;
+  z-index: 30;
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    overflow: scroll;
+  }
+
+  button {
+    margin-top: auto;
+  }
+}
