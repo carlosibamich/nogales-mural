@@ -2,6 +2,8 @@
 
 #item-container {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 412px;
   height: 346px;
   box-shadow: 0 5px 16px rgba(0,0,0,.3);
@@ -99,5 +101,24 @@
         opacity: .7;
       }
     }
+  }
+
+  .custom-button {
+    position: absolute;
+    bottom: 14px;
+    width: 60%;
+    font-size: .95rem;
+    background-color: $red-color;
+    opacity: 0;
+    z-index: 30; 
+
+    &:hover {
+      color: $blue-color;
+      background-color: $white-color;
+    }
+  }
+
+  &:hover .custom-button {
+    opacity: .85;
   }
 }

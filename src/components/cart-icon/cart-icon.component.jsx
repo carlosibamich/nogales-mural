@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { toggleDropdownHidden } from '../../redux/dropdown/dropdown.actions'
+import { toggleDropdownHidden } from '../../redux/cart/cart.actions'
 
 import ShoppingIcon from '../../assets/shopping-bag.svg';
 import ShoppingCart from '../../assets/shopping-cart.svg';

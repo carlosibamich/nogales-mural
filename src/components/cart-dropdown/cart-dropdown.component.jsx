@@ -8,9 +8,10 @@ const CartDropdown = () => {
   return (
     <div className="cart-dropdown-container">
       < div className="cart-items" />
-      <CustomButton>Go to checkout</CustomButton>
+      <CustomButton inverted>Go to checkout</CustomButton>
     </div>
   )
 };
 
 export default CartDropdown;
+//(temporary) export to portfolio.component.jsx
