@@ -3,12 +3,12 @@
 .cart-dropdown-container {
   position: absolute;
   top: 146px;
-  right: 240px;
+  right: 230px;
   display: flex;
   flex-direction: column;
-  width: 240px;
-  height: 340px;
-  padding: 20px;
+  width: 260px;
+  height: 360px;
+  padding: 13px;
   border: 1px solid $red-color;
   background-color: #fefefe;
   z-index: 30;
@@ -16,7 +16,7 @@
   .cart-items {
     display: flex;
     flex-direction: column;
-    height: 240px;
+    height: 276px;
     overflow: scroll;
   }
 
