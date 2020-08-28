@@ -1,6 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
+
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectArtCollection } from '../../redux/collection/collection.selectors';
 
 import PortfolioItem from '../../components/portfolio-item/portfolio-item.component';
 import HomeIcon from '../../components/home-icon/home-icon.component';
@@ -35,9 +39,9 @@ const Portfolio = ({ artCollection, hidden }) => {
   )
 };
 
-const mapStateToProps = ({ cart: { hidden }, collection: { artCollection } }) => ({
-  hidden,
-  artCollection
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartHidden,
+  artCollection: selectArtCollection
 });
 
 export default connect(mapStateToProps)(Portfolio);

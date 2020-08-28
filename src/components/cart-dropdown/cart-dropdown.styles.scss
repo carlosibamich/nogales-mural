@@ -20,6 +20,12 @@
     overflow: scroll;
   }
 
+  .empty-message {
+    margin: 56px auto;
+    font-size: 1.15rem;
+    color: $blue-color;
+  }
+
   button {
     margin-top: auto;
   }

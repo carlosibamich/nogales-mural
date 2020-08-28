@@ -19,14 +19,14 @@ const INITIAL_STATE = {
     {
       name: 'Fat Man',
       imagePATH: require('../../assets/fat-man.jpg'),
-      price: '',
+      price: 0,
       routeName: 'fat-man',
       id: 5
     },
     {
       name: 'Squares and Circles',
       imagePATH: require('../../assets/squares-circles.jpg'),
-      price: '',
+      price: 0,
       routeName: 'squares-circles',
       id: 6
     },
@@ -47,7 +47,7 @@ const INITIAL_STATE = {
     {
       name: 'Jean',
       imagePATH: require('../../assets/jean.jpg'),
-      price: '',
+      price: 0,
       routeName: 'jean',
       id: 9
     },
@@ -82,7 +82,7 @@ const INITIAL_STATE = {
     {
       name: 'Carlos and Crayons',
       imagePATH: require('../../assets/carlos-and-crayons.jpg'),
-      price: '',
+      price: 0,
       routeName: 'carlos-crayons',
       id: 14
     },
@@ -110,7 +110,7 @@ const INITIAL_STATE = {
     {
       name: 'Mercado Díaz',
       imagePATH: require('../../assets/mercado.jpg'),
-      price: '',
+      price: 0,
       routeName: 'mercado-diaz',
       id: 18
     },

@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { createStructuredSelector } from 'reselect';
+import { selectArtCollection } from '../../redux/collection/collection.selectors';
+
 import Portfolio from '../portfolio/portfolio.component';
 
 const CollectionItem = ({ artCollection }) =>  {
@@ -17,8 +20,8 @@ const CollectionItem = ({ artCollection }) =>  {
     );
 };
 
-const mapStateToProps = ({ collection: { artCollection } }) => ({
-  artCollection
+const mapStateToProps = createStructuredSelector({
+  artCollection: selectArtCollection
 });
 
 export default connect(mapStateToProps)(CollectionItem);

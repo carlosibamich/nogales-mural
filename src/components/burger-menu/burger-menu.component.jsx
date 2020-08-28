@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { auth } from '../../firebase/firebase.utils';
 
 import './burger-menu.styles.scss';
@@ -46,8 +49,8 @@ const BurgerMenu = ({ currentUser }) => {
   );
 };
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 });
 
 export default connect(mapStateToProps)(BurgerMenu);
