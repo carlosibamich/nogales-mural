@@ -1,22 +1,17 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import BurgerMenu from '../../components/burger-menu/burger-menu.component';
-
-import HomeIcon from '../../components/home-icon/home-icon.component';
+import HeaderNav from '../../components/header-nav/header-nav.component';
 import SignIn from '../../components/form-sign-in/sign-in.component';
 import SignUp from '../../components/form-sign-up/sign-up.component';
 import Footer from '../../components/footer/footer.component';
 
 import './sign-in-sign-up.styles.scss';
 
-const SignInSignUp = ({ history }) => {
+const SignInSignUp = () => {
   return (
     <div className="contact-container">
-      <div className="home-button" onClick={() => history.push('/')}>
-        <HomeIcon />
-      </div>
-      <BurgerMenu />
+      <HeaderNav />
       <div className="forms">
         <SignIn />
         <SignUp />

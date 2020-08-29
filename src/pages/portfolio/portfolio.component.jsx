@@ -1,29 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
-import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectArtCollection } from '../../redux/collection/collection.selectors';
 
+import HeaderNav from '../../components/header-nav/header-nav.component';
 import PortfolioItem from '../../components/portfolio-item/portfolio-item.component';
-import HomeIcon from '../../components/home-icon/home-icon.component';
-import CartIcon from '../../components/cart-icon/cart-icon.component';
-import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
-import BurgerMenu from '../../components/burger-menu/burger-menu.component';
 import Footer from '../../components/footer/footer.component';
 
 import './portfolio.styles.scss';
 
-const Portfolio = ({ artCollection, hidden }) => {
+const Portfolio = ({ artCollection }) => {
   return (
     <div className='portfolio-spread'>
-      <Link to="/">
-        <HomeIcon />
-      </Link>
-      <CartIcon />
-      { hidden ? null : <CartDropdown /> }
-      <BurgerMenu />
+      <HeaderNav />
       <div className="heading">
         <h1 className="my-name">Carlos Ibarra</h1>
         <div className="separator"></div>
@@ -40,7 +30,6 @@ const Portfolio = ({ artCollection, hidden }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-  hidden: selectCartHidden,
   artCollection: selectArtCollection
 });
 

@@ -1,20 +1,17 @@
 import React from 'react';
 
-import HomeIcon from '../../components/home-icon/home-icon.component';
-import CartIcon from '../../components/cart-icon/cart-icon.component';
-import BurgerMenu from '../../components/burger-menu/burger-menu.component';
+import HeaderNav from '../../components/header-nav/header-nav.component';
 import Footer from '../../components/footer/footer.component';
 
 import './mural.styles.scss';
 
-const Mural = ({ history }) => {
+const Mural = () => {
   return (
-    <div className="mural-container">
-      <div onClick={() => {history.push('/')}}>
-        <HomeIcon />
+    <div>
+      <HeaderNav />
+      <div className="mural-container">
+        <div>Mural Stuff</div> 
       </div>
-      <CartIcon />
-      <BurgerMenu />
       <Footer />
     </div>
   )

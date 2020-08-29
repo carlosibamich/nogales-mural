@@ -7,10 +7,10 @@
   min-height: 100px;
   padding: 15px 0;
   font-size: 20px;
-  border-bottom: 1px solid $dark-grey-color;
+  border-bottom: 1px solid $blue-color;
 
   .image-container {
-    width: 23%;
+    width: 200px;
     padding-right: 15px;
 
     img {
@@ -22,6 +22,38 @@
   .name,
   .quantity,
   .price {
-    width: 23%
+    width: 23%;
+    padding-left: 15px;
+    font-size: 1.05rem;
+    color: $blue-color;
+  }
+
+  .name {
+    color: $red-color;
+  }
+
+  .quantity {
+    display: flex;
+    
+    .arrow {
+      padding-top: 2px;
+      font-weight: bolder;
+      cursor: pointer
+    }
+    
+    span.value {
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .remove-button {
+    padding-left: 63px;
+    color: $red-color;
+    
+    &:hover {
+      cursor: pointer;
+
+    }
   }
 }

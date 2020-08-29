@@ -12,3 +12,12 @@ $dark-grey-color: #444;
   height: 560px;
   color: $blue-color;
 }
+
+@mixin global-container-styles {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 62px;
+  padding-bottom: 230px;
+  background-color: $white-color;
+  border-top: 4px solid $red-color;
+}

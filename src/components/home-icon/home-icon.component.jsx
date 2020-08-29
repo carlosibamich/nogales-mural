@@ -1,10 +1,11 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './home-icon.styles.scss';
 
-const HomeIcon = () => {
+const HomeIcon = ({ history }) => {
   return (
-    <div className="home-icon-container">
+    <div className="home-icon-container" onClick={() => {history.push('/')}}>
       <div className="outer-circle">
         <div className="inner-circle">
           <div className="letter-n">N</div>
@@ -14,4 +15,4 @@ const HomeIcon = () => {
   )
 };
 
-export default HomeIcon;
+export default withRouter(HomeIcon);

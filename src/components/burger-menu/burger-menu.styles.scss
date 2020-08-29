@@ -10,7 +10,7 @@
   .menu-items {
     .menu-toggler {
       position: absolute;
-      top: 90px;
+      top: 80px;
       right: 140px;
       display: flex;
       align-items: center;
@@ -67,7 +67,7 @@
 
     .burger-box {
       position: absolute;
-      top: 90px;
+      top: 80px;
       right: 140px;
       width: 58px;
       height: 42px;
@@ -140,6 +140,7 @@
         visibility: hidden;
         opacity: 0;
         transition: all .5s ease;
+        overflow: visible;
         z-index: 5;
       }
 
