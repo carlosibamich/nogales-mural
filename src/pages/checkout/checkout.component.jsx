@@ -6,6 +6,7 @@ import { selectCartItems, selectCartTotal, selectCartHidden } from '../../redux/
 
 import HeaderNav from '../../components/header-nav/header-nav.component';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+import Footer from '../../components/footer/footer.component';
 
 import './checkout.styles.scss';
 
@@ -40,6 +41,7 @@ const CheckoutPage = ({ cartItems, cartTotal }) => {
           <span>TOTAL: ${cartTotal}</span>
         </div>
       </div>
+      <Footer />
     </div>
   )
 };

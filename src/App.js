@@ -7,13 +7,11 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { setCurrentUser } from './redux/user/user.actions';
 
-import BurgerMenu from './components/burger-menu/burger-menu.component';
+
 import Homepage from './pages/homepage/homepage.component';
 import Mural from './pages/mural/mural.component'
-import Portfolio from './pages/portfolio/portfolio.component';
-import Portafolio from './pages/portafolio/portafoilo.component';
 import CheckoutPage from './pages/checkout/checkout.component';
-import CollectionItem from './pages/collection/collection-item.component';
+import Collection from './pages/collection/collection.component';
 import SignInSignUp from './pages/sign-in-sign-up/sign-in-sign-up.component';
 
 import './App.css';
@@ -50,10 +48,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route path='/mural' component={Mural} />
-          <Route path='/portfolio' component={Portfolio} />
-          <Route path='/portafolio' component={Portafolio} />
           <Route path='/checkout' component={CheckoutPage} />
-          <Route path='/collection-item' component={CollectionItem} />
+          <Route path='/collection' component={Collection} />
           <Route 
             exact 
             path='/signin'

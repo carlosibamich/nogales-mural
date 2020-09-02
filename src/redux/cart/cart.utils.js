@@ -25,5 +25,5 @@ export const removeItemFromCheckout = (checkoutItems, checkoutItemToRemove) => {
     return checkoutItems.filter(checkoutItem => checkoutItem.id !== checkoutItemToRemove.id);
   }
 
-  return checkoutItems.map(checkoutItem => checkoutItem.id === checkoutItemToRemove.id ? { ...checkoutItem, quantity: checkoutItem.quantity -1 } : checkoutItem);
+  return checkoutItems.map(checkoutItem => checkoutItem.id === checkoutItemToRemove.id ? { ...checkoutItem, quantity: checkoutItem.quantity - 1 } : checkoutItem);
 };

@@ -10,11 +10,11 @@ import './portfolio-item.styles.scss';
 
 
 const PortfolioItem = ({ item, addItem, history, match }) => {
-  const { name, imagePATH, routeName } = item;
+  const { name, imagePATH, routeName, linkUrl } = item;
   return (
     <div 
       id='item-container' 
-      onClick={() => history.push(`${match.path}/${routeName}`)}
+      onClick={() => history.push(`${match.url}${linkUrl}`)}
     >
       <div className='portfolio-image'>
         <div 
@@ -38,5 +38,5 @@ const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
 });
 
-export default connect(null, mapDispatchToProps)(withRouter(PortfolioItem));
-//export to portfolio.component.jsx
+export default withRouter(connect(null, mapDispatchToProps)(PortfolioItem));
+//export to portfolio.component and portfolio-feature.component
