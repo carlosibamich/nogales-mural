@@ -6,23 +6,23 @@ import { selectCollectionForPortfolio } from '../../redux/collection/collection.
 
 import Signature from '../../assets/signature.svg';
 import HeaderNav from '../header-nav/header-nav.component';
-import PortfolioItem from '../portfolio-item/portfolio-item.component';
+import ArticuloPortafolio from '../articulo-portafolio/articulo-portafolio.componente';
 import Footer from '../footer/footer.component';
 
-import './portfolio.styles.scss';
+import './portafolio.estilos.scss';
 
-const Portfolio = ({ artCollection }) => {
+const Portfolio = ({ coleccionDeArte }) => {
   return (
     <div className='portfolio-spread'>
       <HeaderNav />
       <div className="heading">
         <img className="my-name" src={Signature} />
         <div className="separator"></div>
-        <h3 className="phrase">A Collection of Ideas, Paintings, Drawings and Sculptures by <span>Carlos Ibarra</span></h3>
+        <h3 className="phrase">Una Colección de Ideas, Pinturas, Dibujos y Esculturas de <span>Carlos Ibarra</span></h3>
       </div>
       <div className='portfolio-items'>
-        {artCollection.map(item => (
-          <PortfolioItem key={item.id} item={item} />
+        {coleccionDeArte.map(articulo => (
+          <ArticuloPortafolio key={articulo.id} articulo={articulo} />
         ))}
       </div>
       <Footer />
@@ -31,8 +31,8 @@ const Portfolio = ({ artCollection }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-  artCollection: selectCollectionForPortfolio
+  coleccionDeArte: selectCollectionForPortfolio
 });
 
 export default connect(mapStateToProps)(Portfolio);
-// export to collection.component
+// exportar a coleccion.componente

@@ -2,7 +2,7 @@
 
 .home-icon-container {
   position: absolute;
-  top: 70px;
+  top: 80px;
   left: 120px;
   width: 64px;
   border-radius: 50%;
@@ -13,8 +13,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
-    height: 64px;
+    width: 58px;
+    height: 58px;
     background-color: #fefefe;
     border: 2px solid $blue-color;
     border-radius: 50%;
@@ -22,8 +22,8 @@
   }
 
   .inner-circle {
-    width: 52px;
-    height: 52px;
+    width: 46px;
+    height: 46px;
     border: 2px solid $red-color;
     border-radius: 50%;
   }
@@ -33,7 +33,7 @@
     top: 8px;
     left: 16px;
     font-family: 'Raleway', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 500;
     color: $red-color;
     transition: color .4s ease;

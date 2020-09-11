@@ -1,5 +1,7 @@
 @import '../../scss-global/config';
 
+$sky-blue-color: #949fb7;
+
 .footer-container {
   position: absolute;
   bottom: 0;
@@ -9,8 +11,9 @@
   width: 100%;
   height: 230px;
   padding-bottom: 50px;
-  background-color: $blue-color;
+  color: $sky-blue-color;
   letter-spacing: .2px;
+  background-color: $blue-color;
   border-top: 4px solid $red-color;
   z-index: 10;
   
@@ -28,12 +31,12 @@
       .info {
         margin-bottom: 3px;
         font-family: 'Raleway', sans-serif;
-        font-size: 1.02rem;
+        font-size: .95rem;
         font-weight: 400;
 
         &.underline {
           padding-bottom: 6px;
-          border-bottom: 1px solid #9EA6C2;
+          border-bottom: 1px solid $sky-blue-color;
         }
       }
     }
@@ -45,7 +48,7 @@
       .copyright {
         margin-bottom: 3px;
         font-family: 'Raleway', sans-serif;
-        font-size: 1.04rem;
+        font-size: .95rem;
         font-weight: 400;
 
         &.underline {
@@ -57,7 +60,7 @@
   
     .social-icons {
       font-size: 2.2rem;
-      color: #9EA6C2;
+      color: $sky-blue-color;
   
       .icon {
         width: 44px;
@@ -86,19 +89,18 @@
     width: 88%;
     height: 5px;
     margin: 35px 0 30px 0;
-    border-top: 1px solid #9EA6C2;
+    border-top: 1px solid $sky-blue-color;
   }
 
   .footer-nav ul {
     display: flex;
     width: 100%;
-    color: #9EA6C2;
 
     li {
-      margin: 0 56px;
+      margin: 0 60px;
       padding-bottom: 3px;
       font-family: 'Raleway', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.14rem;
       font-weight: 400;
       text-transform: lowercase;
       border-bottom: 1px solid transparent;

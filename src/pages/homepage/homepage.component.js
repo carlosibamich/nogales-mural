@@ -1,7 +1,6 @@
 import React from 'react';
 
 import HomeMenu from '../../components/home-menu/home-menu.component';
-import HomeIcon from '../../components/home-icon/home-icon.component'
 import Title from '../../assets/header.svg';
 
 import './homepage.styles.scss';

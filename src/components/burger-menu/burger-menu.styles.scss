@@ -10,7 +10,7 @@
   .menu-items {
     .menu-toggler {
       position: absolute;
-      top: 80px;
+      top: 93px;
       right: 140px;
       display: flex;
       align-items: center;
@@ -41,7 +41,7 @@
             height: 5px;
 
             div {
-              transform: rotate(135deg) scale(.75);
+              transform: rotate(135deg) scale(.65);
 
               /* Superimpose top and bottom burger lines and rotate 90 degrees to form and X */
               &:before {
@@ -67,7 +67,7 @@
 
     .burger-box {
       position: absolute;
-      top: 80px;
+      top: 93px;
       right: 140px;
       width: 58px;
       height: 42px;
@@ -76,9 +76,9 @@
     }
 
     .menu-word {
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       font-family: 'Raleway', sans-serif;
-      font-size: 1.07rem;
+      font-size: 1rem;
       font-weight: 700;
       color: $blue-color;
       letter-spacing: 1.4px;
@@ -91,7 +91,7 @@
       position: absolute;
       bottom: -15px;
       font-family: 'Raleway', sans-serif;
-      font-size: 1.07rem;
+      font-size: 1rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .5px;
@@ -106,8 +106,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 56px;
-      height: 4px;
+      width: 52px;
+      height: 3px;
       z-index: 10;
 
       div {
@@ -120,7 +120,7 @@
         &:before {
           content: '';
           position: absolute;
-          top: 12px;
+          top: 10px;
           width: inherit;
           height: inherit;
           background-color: inherit;

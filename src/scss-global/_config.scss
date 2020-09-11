@@ -1,8 +1,8 @@
 //Variables
-$white-color: #f2ebdc;
+$white-color: #f5eee0;
 $red-color: #CD4638;
-$blue-color: #495785;
-$green-color: #608367;
+$blue-color: #44567D;
+$green-color: #58795e;
 $beige-color: #f2cda0;
 $dark-grey-color: #444;
 
@@ -15,8 +15,11 @@ $dark-grey-color: #444;
 
 @mixin global-container-styles {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
-  padding-top: 62px;
+  padding-top: 52px;
   padding-bottom: 230px;
   background-color: $white-color;
   border-top: 4px solid $red-color;

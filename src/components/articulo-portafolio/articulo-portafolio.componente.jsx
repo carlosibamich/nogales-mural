@@ -1,12 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+import './articulo-portafolio.estilos.scss';
 
-import './portfolio-item.styles.scss';
-
-
-const PortfolioItem = ({ item, history, match }) => {
-  const { name, imagePATH, routeName } = item;
+const ArticuloPortafolio = ({ articulo, history, match }) => {
+  const { routeName, imagePATH, nombre  } = articulo;
   return (
     <div 
       id='item-container' 
@@ -19,13 +17,13 @@ const PortfolioItem = ({ item, history, match }) => {
       </div>
       <div className='content-container'>
         <div className='content'>
-          <h1 className='title'>{name.toUpperCase()}</h1>
-          <h3 className='view-info'>Click to view full image</h3>
+          <h1 className='title'>{nombre.toUpperCase()}</h1>
+          <h3 className='view-info'>Oprima para ver imagen completa</h3>
         </div>
       </div>
     </div>
   )
 };
 
-export default withRouter(PortfolioItem);
-//export to portfolio.component
+export default withRouter(ArticuloPortafolio);
+// exportar a Portafolio.componente

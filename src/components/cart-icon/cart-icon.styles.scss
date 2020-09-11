@@ -2,13 +2,13 @@
 
 .cart-icon {
   position: absolute;
-  top: 76px;
+  top: 88px;
   right: 330px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   z-index: 30;
   cursor: pointer;
 
@@ -17,12 +17,19 @@
     height: 38px;
   }
   
-  .item-count {
+  .item-count-container {
     position: absolute;
-    bottom: 31px;
-    left: 25px;
-    font-size: 20px;
-    font-weight: 500;
-    color: $red-color;
+    bottom: 34px;
+    left: 11px;
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 18px;
+
+    .item-count {
+      font-size: 18px;
+      font-weight: 500;
+      color: $red-color;
+    }
   }
 }

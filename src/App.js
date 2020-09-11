@@ -12,6 +12,7 @@ import Homepage from './pages/homepage/homepage.component';
 import Mural from './pages/mural/mural.component'
 import CheckoutPage from './pages/checkout/checkout.component';
 import Collection from './pages/collection/collection.component';
+import Coleccion from './pages/coleccion/coleccion.componente';
 import SignInSignUp from './pages/sign-in-sign-up/sign-in-sign-up.component';
 
 import './App.css';
@@ -50,6 +51,7 @@ class App extends React.Component {
           <Route path='/mural' component={Mural} />
           <Route path='/checkout' component={CheckoutPage} />
           <Route path='/collection' component={Collection} />
+          <Route path='/coleccion' component={Coleccion} />
           <Route 
             exact 
             path='/signin'

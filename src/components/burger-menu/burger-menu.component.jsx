@@ -25,7 +25,7 @@ const BurgerMenu = ({ currentUser }) => {
             <div className="dropdown-options">
               <Link className="option" to="/">Home</Link>
               <Link className="option" to="/mural">Mural</Link>
-              <Link className="option" to="/collection">Collection</Link>
+              <Link className="option" to="/collection">Portfolio</Link>
               <Link className="option" to="/about">About</Link>
               <Link className="option" to="/contact">Contact</Link>
               {currentUser ? (
@@ -38,7 +38,7 @@ const BurgerMenu = ({ currentUser }) => {
                   </Link>
                 )
               }
-              <Link className="option" to="/coleccion">Colección</Link>
+              <Link className="option" to="/coleccion">Portafolio</Link>
               <Link className="option" to="/informacion">Información</Link>
               <Link className="option" to="/contacto">Contactar</Link>
             </div>

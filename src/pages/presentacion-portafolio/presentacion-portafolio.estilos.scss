@@ -8,10 +8,11 @@
   border-top: 4px solid transparent;
 
   .my-name {
-    width: 680px;
-    height: 100%;
     margin-bottom: 10px;
-    opacity: .82;
+    font-size: 3.55rem;
+    font-weight: 500;
+    color: $blue-color;
+    text-transform: uppercase;
     z-index: 20;
   }
 
@@ -54,7 +55,7 @@
           color: $blue-color;
         }
 
-        .medium {
+        .material {
           display: inherit;
           align-items: flex-end;
           padding-bottom: 4px;
@@ -76,6 +77,21 @@
       .add-to-cart {
         position: absolute;
         bottom: 0;
+      }
+    }
+  }
+
+  .square {
+    .title-medium {
+      flex-direction: column;
+
+      .title {
+        font-size: 1.92rem !important;
+      }
+
+      .material {
+        margin-top: 6px;
+        padding-left: 0 !important;
       }
     }
   }

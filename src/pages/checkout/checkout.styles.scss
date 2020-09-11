@@ -2,6 +2,7 @@
 
 .checkout-page-container {
   @include global-container-styles;
+  align-items: flex-start;
 
   .checkout-content {
     position: relative;
@@ -10,7 +11,7 @@
     align-items: center;
     width: 55%;
     min-height: 90vh;
-    margin: 150px auto 230px;
+    margin: 150px auto 150px;
 
     .checkout-header {
       display: flex;
@@ -31,6 +32,12 @@
         justify-content: flex-end;
         width: 8%;
       }
+
+    }
+    
+    button {
+      margin-top: 50px;
+      margin-left: auto;
     }
 
     .total {
